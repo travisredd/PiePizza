@@ -1,17 +1,17 @@
 ﻿@page
 @model PiePizza.Pages.IndexModel
 
-@foreach (var pie in Pies)
+@foreach (var pie in Model.pieRepository.GetAllPies())
 {
     <div class="col-sm-4 col-lg-4 col-md-4">
         <div class="thumbnail">
-            <img src="@pie.ImageThumbnailUrl" alt="">
+            <img src="@Model.Pie.ImageThumbnailUrl" alt="">
             <div class="caption">
-                <h3 class="pull-right">@pie.Price.ToString("c")</h3>
+                <h3 class="pull-right">@Model.Pie.Price.ToString("c")</h3>
                 <h3 class="text-sucess">
-                    @pie.Name
+                    @Model.Pie.Name
                 </h3>
-                <p>@pie.ShortDescription</p>
+                <p>@Model.Pie.ShortDescription</p>
             </div>
         </div>
     </div>
