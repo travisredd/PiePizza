@@ -27,9 +27,9 @@ namespace PiePizza
             if (env.IsDevelopment())
             {
                 app.UseDeveloperExceptionPage();
+                app.UseStaticFiles();
             }
-            app.UseStatusCodePages();
-            app.UseStaticFiles();
+            //app.UseStatusCodePages();
             app.UseMvcWithDefaultRoute();
         }
     }
