@@ -29,7 +29,7 @@ namespace PiePizza.Pages
         public void OnGet()
         {
             var Pies = pieRepository.GetAllPies();
-            Pie = (Pie)Pies;
+           // Pie = (Pie)Pies;
         }
 
 
